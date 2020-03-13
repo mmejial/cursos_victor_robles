@@ -1,0 +1,40 @@
+*{
+    margin: 0px;
+    padding: 0px
+}
+#cajas{
+    max-width: 1000px;
+    border: 2px solid black;
+
+}
+.caja{
+    display: block;
+    width: 250px;
+    height: 250px;
+   
+    background-color: aqua;
+    border-radius: 10px;/* redondera los bordes */
+    border: 5px solid red;
+    margin: 15px;/* agrega los 4 margenes pero pueden ponerse por separado */
+    margin-top: 15px;
+    margin-bottom: 20px;
+    padding: 20px;
+    float: left;
+
+}
+
+
+.caja p{
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 230px;
+}
+.cleardiv{
+    clear: none;
+    clear: both;
+}
+body{
+    padding: 20px;
+}

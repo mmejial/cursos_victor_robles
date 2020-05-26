@@ -1,8 +1,9 @@
-.clearfix{
+.clearfix {
     float: none;
     clear: both;
-    
 }
+
+
 /* fuentes */
 
 @font-face {
@@ -228,21 +229,21 @@ header {
     margin: 0px auto;
 }
 
-.red{
-   color:red !important;
+.red {
+    color: red !important;
 }
-.blue{
- color: blue;
+
+.blue {
+    color: blue;
 }
 
 
 /* barra lateral */
 
 #aside,
-#frase { 
-    
+#frase {
     width: 200px;
-    float:  right;
+    float: right;
     margin: 30px;
     margin: 30px;
     background-color: white;
@@ -252,7 +253,6 @@ header {
 }
 
 #frase {
-    
     width: 180px;
     padding: 10px;
     font-size: 14px;
@@ -309,10 +309,14 @@ header {
     margin-bottom: 5px;
 }
 
-#aside input,#aside label {
+#aside input,
+#aside label {
     margin: 0px auto;
     text-align: center;
-}/* centra las cosas dentro de esta caja */
+}
+
+
+/* centra las cosas dentro de esta caja */
 
 #aside li {
     margin-top: 8px;
@@ -321,65 +325,68 @@ header {
     list-style: square;
 }
 
+
 /* secciones */
- #sections{
-     float: left;
-     width: 75%;
-     font-family: sans-serif;
- }
- #sections #titulo{
-     margin-top: -20px;
-     font-family: sans-serif;
-     font-size: 24px;
-     font-weight: normal;
-     letter-spacing: 1px;
-     text-align: center;
-     padding-top: 20px;
-     padding-bottom: 10px;
-     border-bottom: 1px solid #ccc;
- }
- #sections section{
-     margin-top: 40px;
-     background-color: white;
-     padding: 20px;
-     border: 1px solid #ccc;
-     box-shadow: 0px 0px 4px #c9c9c9;
-     color: #333333;
-     font-size: 16px;
-     overflow: hidden;
-     
- }
- #sections #article{
+
+#sections {
+    float: left;
+    width: 75%;
+    font-family: sans-serif;
+}
+
+#sections #titulo {
+    margin-top: -20px;
+    font-family: sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+#sections section {
+    margin-top: 40px;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 4px #c9c9c9;
+    color: #333333;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+#sections #article {
     margin: 10px;
     margin-top: 20px;
     margin-bottom: 20px;
- }
+}
 
- #article article{
-     margin-top: 20px;
-     margin-bottom: 20px;
- }
+#article article {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 
- #sections .date{
-     color: grey;
-     font-size: 14px;
- }
- #history{
-     float: left;
-     margin-top: 20px;
-     font-family: sans-serif;
-     margin-right: 20px;
- }
- #footer{
-     width: 100%;
-     margin:0px auto;
-     text-align: center;
-     margin-top: 40px;
-     background-color: black;
-     color: white;
-     font-family: sans-serif;
-     font-size: 14px;
-     
+#sections .date {
+    color: grey;
+    font-size: 14px;
+}
 
+#history {
+    float: left;
+    margin-top: 20px;
+    font-family: sans-serif;
+    margin-right: 20px;
+}
 
- }
+#footer {
+    width: 100%;
+    margin: 0px auto;
+    text-align: center;
+    margin-top: 40px;
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+    font-size: 14px;
+}

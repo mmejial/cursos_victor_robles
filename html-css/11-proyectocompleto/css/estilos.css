@@ -46,6 +46,11 @@ body {
 .icon {
     font-family: 'simbolos';
 }
+.clearfix{
+    float: none;
+    clear: both;
+
+}
 
 
 /* cabecera */
@@ -68,15 +73,61 @@ body {
     letter-spacing: 1px;
     cursor: pointer;
     overflow: hidden;
-    transition: all 300ms;
+    
 }
+#logo:hover h3{
+    animation: fromRigth 300ms linear;
 
+}
+@keyframes fromRigth{
+    from{
+        transform: translateX(200%);
+    }
+
+    to{
+        transform: translateX(0%);
+    }
+
+}
+#logo:hover{
+    border-radius: 2px;
+    color: black;
+    background-color: #ccc;
+}
 #logo .engrane {
     display: block;
     float: left;
     font-size: 30px;
     margin-top: 8px;
     margin-left: 26px;
+    animation-name: rotate-gear;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotate-gear{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+#logo:hover .engrane{
+    animation: fromBellow 500ms linear;
+}
+@keyframes fromBellow{
+    0%{
+        transform: translateY(0%);
+    }
+    50%{
+        transform: translateY(200%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+
 }
 
 #logo h3 {
@@ -194,7 +245,7 @@ body {
     margin: 20px;
 }
 
-aside h3 {
+#lateral h3 {
     display: block;
     width: auto;
     height: 49px;
@@ -352,4 +403,180 @@ aside h3:first-child {
     margin-left: 20px;
     margin-top: 10px;
     margin-bottom: 20px;
+}
+/* articulos */
+#articles{
+    width: 860px;
+    float: left;
+}
+
+#articles h2{
+    display: block;
+    width: 100%;
+    height: 75px;
+    line-height: 75px;
+    text-align: center;
+    font-family: "BebasNeue";
+    font-size: 40px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    background: url('../img/pxgray.png'), white;
+    box-shadow: 0px 1px 0px #393d3f, 1px 2px #393d3f;
+    margin: 0px auto;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+#articles article{
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    margin: 40px auto;
+    padding: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: white;
+    color: black;
+    box-shadow: 1px 1px 2px #ddd;
+}
+
+#articles article h4{
+    display: block;
+    font-size: 23px;
+    margin: 1px;
+    
+
+}
+#articles article h4 a{
+    text-decoration: none;
+    color: #00538c ;
+    
+    box-shadow: 1px 1px 2px #ddd;
+
+}
+#articles article h4 a:hover{
+text-decoration: underline;
+cursor: pointer;
+color: #156785;
+transition: all 400ms;
+
+}
+#articles .data{
+    float: right;
+    background: #393d3f;
+    color: white;
+    height: 30px;
+    line-height: 30px;
+    margin: -10px;
+    padding: 4px;
+    font-size: 13px;
+    border-radius: 0px 0px 0px 5px;
+
+}
+#articles .data span{
+margin: 5px;
+
+}
+#articles article p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 15px;
+
+}
+
+#blog{
+    font-size: 50px;
+    font-family: "BebasNeue";
+    
+    height: 100px;
+    margin-top: 60px;
+    line-height: 100px;
+    text-align: center;
+
+}
+#blog a{
+    display: block;
+    font-family: 'BebasNeue';
+    text-decoration: none;
+    color: #00538c;
+    letter-spacing: 2px;
+
+}
+#blog a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    color: #156785;
+    transition: all 100ms;
+
+}
+/* footer */
+#footer{
+    width: 100%;
+    height: 470px;
+    background: black;
+    color: white;
+    overflow: hidden;
+}
+#footer .wrap > div{
+    float: left;
+    width: 320px;
+    height: 370px;
+    margin: 40px;
+    text-align: center;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+footer a{
+    text-decoration: none;
+    color: #37bcf9;
+    transition: all 300ms;
+    list-style: none;
+}
+#footer h5{
+    display: block;
+    background: url(../img/pxgray.png), white;
+    height: 50px;
+    letter-spacing: 2px;
+    text-align: center;
+    font-family: 'BebasNeue';
+    font-size: 40px;
+    line-height: 55px;
+    color: black;
+    border-radius: 5px;
+    margin-bottom: 5px;
+
+}
+#footer ul{
+    text-align: left;
+    margin: 20px;
+    font-size: 25px;
+}
+footer ul li{
+    margin-top: 10px;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+
+}
+#footer ul li a{
+    display: block;
+    height: 40px;
+}
+
+#footer iframe{
+    width: 100%;
+    height: 300px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 5px solid white;
+    box-shadow: 0px 0px 5px grey;
+}
+
+
+#footer img{
+    margin-bottom: 15px;
+}
+
+#footer #browser img{
+    width: 45px;
+    
 }

@@ -178,7 +178,19 @@ body {
     background-position: -200px -200px;
     margin: 20px auto;
     width: 95%;
+    animation: backbanner 10s linear;
+    overflow: hidden;
 }
+
+@keyframes backbanner{
+    0%{
+        background-position: 0px 0px;
+    }
+    100%{
+        background-position: -200px -200px;
+    }
+}
+
 
 #banner h1 {
     display: block;
@@ -189,6 +201,34 @@ body {
     letter-spacing: 2px;
     text-shadow: 2px 2px 1px black;
     margin: 27px auto;
+    animation: texto 19s linear;
+    
+}
+@keyframes texto{
+    0%{
+        transform: translateX(-600%) scale(5,5);
+        opacity: 1;
+
+    }
+    50%{
+        transform: translateX(600%) scale(5,5);
+        opacity: 1;
+
+    }
+    75%{
+        transform: translateX(-600%) scale(5,5);
+        text-shadow: none;
+        color: transparent;
+        opacity: 0;
+
+    }
+    100%{
+        transform: translateX(0%) scale(1,1);
+        text-shadow: 2px 2px 1px black;
+        color: white;
+        opacity: 1;
+        
+    }
 }
 
 
@@ -206,6 +246,20 @@ body {
     background: white;
     cursor: pointer;
     transition: all 300ms;
+}
+
+.card:hover .icon{
+    font-size: 70px;
+    color: #37bcf9;
+    animation: showIcon 300ms linear;
+}
+@keyframes showIcon{
+    from{
+        transform: translateY(-200%);
+    }
+    to{
+        transform: translateY(0%);
+    }
 }
 
 .card .icon {
@@ -226,12 +280,46 @@ body {
     font-weight: bold;
     text-align: center;
     color: #00538c;
+    transition: all 300ms;
+}
+.card:hover .categori{
+    color: white;
+    animation: showCategory 400ms linear;
+}
+@keyframes showCategory{
+    from{
+        transform: translateY(-300%);
+        color: black;
+    }
+    to{
+        transform: translateY(0%);
+        color: white;
+    }
 }
 
 .card .description {
     text-align: center;
     color: #00538c;
     font-family: cursive;
+    transition: all 300ms;
+}
+.card:hover .description{
+    color: white;
+    animation: showDescription 300ms linear;
+}
+@keyframes showDescription{
+    from{
+        transform: translateX(-300%);
+        color: black;
+    }
+    to{
+        transform: translateX(0%);
+        color: white;
+    }
+}
+
+.card:hover{
+    background: black;
 }
 
 
@@ -404,6 +492,30 @@ aside h3:first-child {
     margin-top: 10px;
     margin-bottom: 20px;
 }
+
+#social .overlay{
+    display: block;
+    height: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 0px 0px 1px #ccc;
+    border: 3px solid white;
+    box-shadow: 0px 0px 4px #ccc;
+    background: #f4f7f3;
+    position: absolute;
+    padding: 5px;
+    margin-left: 70px;
+    margin-top: -50px;
+    transform: translateX(-80%);
+    opacity: 0;
+    transition: all 300ms;
+
+}
+#social div:hover .overlay{
+    opacity: 1;
+    transform: translateX(0px) ;
+}
 /* articulos */
 #articles{
     width: 860px;
@@ -484,29 +596,55 @@ margin: 5px;
 }
 
 #blog{
-    font-size: 50px;
-    font-family: "BebasNeue";
+    
+  
     
     height: 100px;
     margin-top: 60px;
     line-height: 100px;
     text-align: center;
+    transition: all 1s;
 
 }
 #blog a{
+    font-size: 50px;
     display: block;
     font-family: 'BebasNeue';
     text-decoration: none;
     color: #00538c;
     letter-spacing: 2px;
+    transition: all 1s;
 
 }
-#blog a:hover{
-    text-decoration: underline;
-    cursor: pointer;
-    color: #156785;
-    transition: all 100ms;
+#blog:hover{
+    background-color: #555;
+    border: 10px solid #37bcf9;
+    border-radius: 240px;
+    box-shadow: 0px 0px 10px gray;
+    animation: blink 10s infinite linear;
 
+}
+#blog:hover a{
+    color: white;
+    text-shadow: 1px 1px 1px black, 1px 2px 1px black, 1px 3px 1px black, 1px 4px 1px black, 1px 5px 1px black, 1px 6px 1px black;
+
+} 
+@keyframes blink{
+    0%{
+        border: 10px solid #37bcf9;
+    }
+    25%{
+        border: 10px solid green;
+    }
+    50%{
+        border: 10px solid yellow;
+    }
+    75%{
+        border: 10px solid white;
+    }
+    100%{
+        border: 10px solid #37bcf9;
+    }
 }
 /* footer */
 #footer{
@@ -560,7 +698,14 @@ footer ul li{
 #footer ul li a{
     display: block;
     height: 40px;
+    transition: all 300ms;
 }
+#footer ul li:hover a{
+    padding-left: 40px;
+    color: white;
+    width: 100%;
+}
+
 
 #footer iframe{
     width: 100%;

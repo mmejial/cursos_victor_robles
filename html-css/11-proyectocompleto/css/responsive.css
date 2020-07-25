@@ -1,0 +1,89 @@
+@media(max-width: 1250px) {
+    .wrap{
+        width: 90%;
+        margin: 0px auto;
+    }
+    #banner h1{
+        font-size: 35px;
+        text-align: center;
+        margin: 33px auto;
+    }
+    .description{
+        font-size: 14px;
+    }
+    .card{
+        width: 16% ;
+        margin: 1.45%;
+    }
+    #articles{
+        width: 65%;
+    }
+    #articles article{
+        width: 97%;
+    }
+    
+    #footer .wrap div{
+        width: 24%;
+    }
+
+    #footer #browser img{
+        width: 35%;
+    }
+
+    #footer h5{
+        font-size: 30px;
+    }
+
+}
+@media(max-width: 1080px) {
+    .card .categori{
+        font-size: 17px;
+    }
+
+    .card #articles{
+        font-size: 14px;
+    }
+    #articles{
+        width: 61%;
+    }
+}
+
+@media(max-width: 970px){
+    .card .categori{
+        font-size: 12px;
+    }
+
+    .card .description{
+        font-size: 12px;
+    }
+    #articles{
+        width: 55%;
+    }
+    #footer h5{
+        font-size: 15px ;
+    }
+    #footer .wrap div{
+        width: 15%;
+    }
+
+    #footer #browser img{
+        width: 15%;
+    }
+
+    #footer h5{
+        font-size: 12px;
+    }
+    #footer ul li a{
+        font-size: 15px;
+    }
+    #footer #location{
+        width: 25%;
+        margin: 0 auto;
+    }
+}
+
+
+@media(max-width: 970px){
+
+}
+

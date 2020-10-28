@@ -1,0 +1,83 @@
+//variables
+*{
+    margin: 0px;
+    padding: 0px;
+}
+$fuenteTipica: Arial;
+$colorFondo: #ccc;
+$colorLetra: red;
+
+//uso de variables
+body{
+    background-color: $colorFondo;
+}
+
+h1{
+    font-family: $fuenteTipica;
+    color: $colorLetra;
+}
+
+.caja{
+    padding: 10px;
+    background-color: white;
+    width: 500px;
+    margin: 0px auto;
+    text-align: center;
+    border: 1px solid black;
+    h1{
+        color: blue;
+    }
+    p{
+        color: green;
+    }
+    .info{
+        font-size: 10px;
+        span{
+            font-size: 20px;
+            color: yellowgreen;
+        }
+    }
+}
+
+//funciones
+@mixin crearBrodes($color, $size, $shadow) {//se crean funciones y se pueden introducir variables
+    border: $size solid $color;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px $shadow;    
+}
+.caja{
+    @include crearBrodes(red, 10px, green);
+}
+.listado{
+    @include crearBrodes(orange, 50px, purple);
+}
+
+//herencia
+%alert-normal{
+    border: 1px solid green;
+    background: #eee;
+    padding: 10px;
+    width: 80%;
+    margin: 20px auto;
+}
+.alert{
+    @extend %alert-normal;
+}
+
+//operadores
+h1{
+    font-size: 20px +5px;
+}
+
+
+//condicionales
+$colorFondo: #eda;
+h1{
+@if $colorFondo == #ccc {
+    color: black;  
+}
+@else{
+    color: orange;
+
+}
+}

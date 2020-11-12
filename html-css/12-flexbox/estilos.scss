@@ -11,10 +11,15 @@ body {
     padding: 5px;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 500px;
+    align-items: flex-end;
 }
 
 .caja {
-    flex-basis: 25%;
+    
+    flex-grow: 1;
     font-size: 20px;
     font-weight: bold;
     text-align: center;
@@ -25,10 +30,12 @@ body {
 }
 
 @mixin colorCaja($color) {
+    
     background-color: $color;
 }
 
 .red {
+    
     @include colorCaja(red);
 }
 

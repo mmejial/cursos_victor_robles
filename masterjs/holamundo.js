@@ -24,9 +24,5 @@ else{
 }
  */
 
- var a=0;
- var b=0;
-
- do{
-    
- }while( a < 0)
+ document.write("<h1>anita lava la tina</h1>");
+ 
